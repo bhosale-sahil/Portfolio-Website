@@ -21,12 +21,12 @@ class Coding extends StatelessWidget {
             style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
-        AnimatedLinearProgressIndicator(percentage: 0.7,lang: 'Dart',),
-        AnimatedLinearProgressIndicator(percentage: 0.85,lang: 'Python',),
-        AnimatedLinearProgressIndicator(percentage: 0.62,lang: 'C++',),
+        AnimatedLinearProgressIndicator(percentage: 0.9,lang: 'Dart',),
+        AnimatedLinearProgressIndicator(percentage: 0.95,lang: 'Python',),
+        AnimatedLinearProgressIndicator(percentage: 0.9,lang: 'C++',),
         AnimatedLinearProgressIndicator(percentage: 0.9,lang: 'HTML',),
         AnimatedLinearProgressIndicator(percentage: 0.57,lang: 'CSS',),
-        AnimatedLinearProgressIndicator(percentage: 0.5,lang: 'Javascript',),
+        AnimatedLinearProgressIndicator(percentage: 0.8,lang: 'Javascript',),
       ],
     );
   }

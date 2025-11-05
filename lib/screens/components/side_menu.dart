@@ -10,9 +10,20 @@ import 'my_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SideMenu extends StatelessWidget {
-  const SideMenu({
+  SideMenu({
     super.key,
   });
+  final DateTime birthDate =
+      DateTime(2002, 9, 17); // Replace with your actual birthdate
+  int calculateAge(DateTime birthDate) {
+    final today = DateTime.now();
+    int age = today.year - birthDate.year;
+    if (today.month < birthDate.month ||
+        (today.month == birthDate.month && today.day < birthDate.day)) {
+      age--;
+    }
+    return age;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,16 +38,16 @@ class SideMenu extends StatelessWidget {
                 child: Column(
                   children: [
                     AreaInfoText(
-                      title: 'Residence',
-                      text: 'India',
+                      title: 'City',
+                      text: 'Binghamton',
                     ),
                     AreaInfoText(
-                      title: 'City',
-                      text: 'Mumbai',
+                      title: 'State',
+                      text: 'New York',
                     ),
                     AreaInfoText(
                       title: 'Age',
-                      text: '20',
+                      text: calculateAge(birthDate).toString(),
                     ),
                     Skills(),
                     SizedBox(
@@ -49,7 +60,7 @@ class SideMenu extends StatelessWidget {
                       height: defaultPadding / 2,
                     ),
                     TextButton(
-                      onPressed: () async{
+                      onPressed: () async {
                         final url = Uri.parse(
                             "https://drive.google.com/file/d/1zxWgB0f0kAz2FX38uGYyRhzOOw07aY7d/view?usp=sharing");
                         if (await canLaunchUrl(url)) {
@@ -105,23 +116,26 @@ class SideMenu extends StatelessWidget {
                                   SvgPicture.asset('assets/icons/github.svg')),
                           IconButton(
                               onPressed: () async {
-                                final url =
-                                Uri.parse("https://twitter.com/kim_jong_legend");
+                                final url = Uri.parse(
+                                    "https://twitter.com/kim_jong_legend");
                                 if (await canLaunchUrl(url)) {
-                                launchUrl(url);
+                                  launchUrl(url);
                                 }
                               },
                               icon:
                                   SvgPicture.asset('assets/icons/twitter.svg')),
                           IconButton(
-                              onPressed: () async{
-                                final url =
-                                Uri.parse("https://instagram.com/sahil._.bhosale");
+                              onPressed: () async {
+                                final url = Uri.parse(
+                                    "https://instagram.com/sahil._.bhosale");
                                 if (await canLaunchUrl(url)) {
-                                launchUrl(url);
+                                  launchUrl(url);
                                 }
                               },
-                              icon: Icon(FontAwesomeIcons.instagram,color: bodyTextColor,)),
+                              icon: Icon(
+                                FontAwesomeIcons.instagram,
+                                color: bodyTextColor,
+                              )),
                           Spacer(),
                         ],
                       ),

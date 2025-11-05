@@ -10,6 +10,11 @@ class Project {
 
 List<Project> demo_projects = [
   Project(
+      title: "Autonomous Industrial Robotic Arm",
+      description:
+          "An autonomous industrial robotic arm which automates the task of picking and placing packages of various shapes and sized from a randomly arranged cluster to its designated drop zone.",
+      url: "https://ieeexplore.ieee.org/document/10731029"),
+  Project(
       title: "KOS-Professionals Connect",
       description:
           "A Flutter Application which lets Professionals and Entrepreneurs connect to each other. Ability to Post,Discover,Chat,etc between people.Use of Firebase as BaaS for Login,Signup,Authentication,Store User Data, Realtime Chat etc.",
@@ -34,4 +39,8 @@ List<Project> demo_projects = [
       description:
           "A personal portfolio website built completely in flutter. Responsive and animated website which demonstates flutter web skills as well as grasp on animations using flutter. Deployed using Firebase",
       url: "https://github.com/kimjong69/Bitcoin-Ticker"),
+  Project(
+      title: "Splitly",
+      description:
+          "A Flutter app to split bills and duties among tenants. A duty approval system that enforces accountability via penalties. The penalties are automatically deducted if the duties are not completed at the end of the week and the only way to avoid it is if all the other tenants approve that the duties are performed."),
 ];

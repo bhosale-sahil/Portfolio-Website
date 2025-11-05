@@ -20,7 +20,7 @@ class HomeBanner extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           Container(
-            color: darkColor.withOpacity(0.66),
+            color: darkColor.withValues(alpha: 0.66),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
@@ -29,7 +29,7 @@ class HomeBanner extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Discover my Amazing \nArt Space!',
+                  'Get to know about me!',
                   style: Responsive.isDesktop(context)
                       ? Theme.of(context).textTheme.displaySmall!.copyWith(
                           fontWeight: FontWeight.bold, color: Colors.white)
@@ -41,19 +41,19 @@ class HomeBanner extends StatelessWidget {
                   const SizedBox(
                     height: defaultPadding / 2,
                   ),
-                if (!Responsive.isMobileLarge(context))
-                  ElevatedButton(
-                    style: TextButton.styleFrom(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: defaultPadding * 2,
-                            vertical: defaultPadding),
-                        backgroundColor: primaryColor),
-                    onPressed: () {},
-                    child: Text(
-                      'EXPLORE NOW',
-                      style: TextStyle(color: darkColor),
-                    ),
-                  )
+                // if (!Responsive.isMobileLarge(context))
+                //   ElevatedButton(
+                //     style: TextButton.styleFrom(
+                //         padding: EdgeInsets.symmetric(
+                //             horizontal: defaultPadding * 2,
+                //             vertical: defaultPadding),
+                //         backgroundColor: primaryColor),
+                //     onPressed: () {},
+                //     child: Text(
+                //       'EXPLORE NOW',
+                //       style: TextStyle(color: darkColor),
+                //     ),
+                //   )
               ],
             ),
           )
@@ -109,7 +109,7 @@ class AnimatedText extends StatelessWidget {
           speed: Duration(milliseconds: 60),
         ),
         TyperAnimatedText(
-          'weather app using openweather api',
+          'industrial autonomous robotic systems',
           speed: Duration(milliseconds: 60),
         ),
         TyperAnimatedText(
@@ -121,7 +121,7 @@ class AnimatedText extends StatelessWidget {
           speed: Duration(milliseconds: 60),
         ),
         TyperAnimatedText(
-          'live weather app',
+          'app for managing tenant duties',
           speed: Duration(milliseconds: 60),
         ),
         TyperAnimatedText(
@@ -145,7 +145,7 @@ class FlutterCodedText extends StatelessWidget {
         text: '<',
         children: [
           TextSpan(
-            text: 'flutter',
+            text: '/',
             style: TextStyle(color: primaryColor),
           ),
           TextSpan(text: '>')

@@ -16,7 +16,7 @@ class MyInfo extends StatelessWidget {
             CircleAvatar(radius: 50,backgroundImage: AssetImage('assets/images/myimg.jpg'),),
             Spacer(),
             Text('Sahil Bhosale',style: Theme.of(context).textTheme.titleSmall,),
-            Text('Flutter Developer & Engineer',style: TextStyle(fontWeight: FontWeight.w200,height: 1.5),),
+            Text('Software Developer & Engineer',style: TextStyle(fontWeight: FontWeight.w200,height: 1.5),),
             Spacer(flex: 2,),
           ],
         ),
