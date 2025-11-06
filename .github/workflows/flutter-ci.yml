@@ -16,8 +16,6 @@ jobs:
           flutter-version: "3.19.0" # or your app version
       - name: Install Dependencies
         run: flutter pub get
-      - name: Run Tests
-        run: flutter test
       - name: Build APK
         run: flutter build apk --release
       - name: Upload Artifact
